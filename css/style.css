@@ -357,8 +357,14 @@ color:#cfcfcf;
     }
 
     .foto-principal {
-        max-height: 60vh;
-        width: auto;
+        content: url("../img/foto_celular.png");
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        max-height: none;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
     }
 
     /* Decorações alinhadas horizontalmente abaixo da foto */
