@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'BlackMango';
-    src: url('/portfolio_maria/fonte/BlackMango-Regular.ttf') format('truetype');
+    src: url('../fonte/BlackMango-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
