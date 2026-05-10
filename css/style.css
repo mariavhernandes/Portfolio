@@ -313,54 +313,85 @@ color:#cfcfcf;
 }
 
 @media (max-width: 600px) {
-    /* 1. Seta para o lado direito */
-    .seta-container {
-        position: absolute !important;
-        right: 20px !important; /* Move para a direita */
-        left: auto !important;
-        bottom: 40px !important;
-        transform: none !important;
-        display: block !important;
+    /* 1. NAVBAR (Mais fina e sem espaços sobrando) */
+    .logo-space {
+        margin-left: 0 !important;
     }
 
-    .seta-pula {
-        width: 55px !important;
+    .menu-space {
+        margin-right: 0 !important;
+        gap: 10px !important;
+        padding-top: 10px;
     }
 
-    /* 2. Navbar e Footer (Responsividade) */
-    .header-fixo .navbar {
-        padding: 10px 0 !important;
+    .navbar-brand img {
+        width: 120px !important;
+        height: auto !important;
     }
 
-    /* Ajusta o padding do footer que estava em 80px */
-    .footer {
-        padding: 30px 15px !important; 
-        text-align: center;
-        width: 100% !important;
+    .container-fluid {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
     }
 
-    .footer-info {
-        flex-direction: column !important; /* Empilha os itens (local, email, botão) */
-        gap: 15px !important;
-        align-items: center !important;
-    }
-
-    /* Esconde as barras separadoras "|" no mobile para não poluir */
-    .footer-divider, .navbar-nav .separator {
+    .navbar-nav .separator {
         display: none !important;
     }
 
-    /* 3. Conteúdo menos achatado (Width maior) */
+    /* 2. HOME E FOTO (Respiro para a imagem principal) */
+    .home {
+        height: auto;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 50px;
+        overflow: visible;
+    }
+
+    .imagem {
+        height: auto;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .foto-principal {
+        max-height: 60vh;
+        width: auto;
+    }
+
+    /* Decorações alinhadas horizontalmente abaixo da foto */
+    .decoracoes-mobile-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .item-coracao, .item-coracao2, .item-estrela, 
+    .decoracao-lat-esq, .decoracao-lat-dir {
+        position: static !important;
+        width: 35px !important;
+        height: auto !important;
+        transform: none !important;
+    }
+
+    /* 3. CONTEÚDO LARGO (Ocupando a tela e menos espremido) */
     .container-topo-novo, 
     .sobre-container, 
     .cursos-idiomas {
         width: 100% !important;
         max-width: 100% !important;
-        padding: 0 15px !important; /* Margem mínima nas bordas da tela */
-        margin: 0 auto !important;
+        padding: 0 15px !important; /* Espaço mínimo para não encostar no vidro do celular */
+        margin: 0 !important;
+        display: flex;
+        flex-direction: column;
     }
 
-    /* Garante que os cards ocupem quase toda a largura da tela */
     .card-biografia, 
     .coluna-esquerda, 
     .coluna-direita, 
@@ -368,29 +399,61 @@ color:#cfcfcf;
     .card-idiomas {
         width: 100% !important;
         max-width: 100% !important;
-        margin-bottom: 20px !important;
-        padding: 25px 20px !important; /* Espaço interno para o texto não sufocar */
+        padding: 25px 15px !important; /* Texto ganha espaço lateral interno */
+        margin: 0 0 20px 0 !important;
     }
 
-    /* Ajuste específico para o bloco de idiomas e estrelas */
+    .titulo-sobre, .subtitulo, h2 {
+        text-align: center !important;
+    }
+
+    .lista li {
+        margin-bottom: 15px;
+        font-size: 15px;
+        line-height: 1.4;
+    }
+
+    /* Ajuste Estrelas de Idiomas */
     .posicao-estrela-idioma {
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 10px !important;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 
     .vector.estrela-esquerda, 
     .vector.estrela-direita {
         position: static !important;
-        margin: 10px auto !important;
+        margin: 10px auto;
         width: 40px !important;
-        height: auto !important;
     }
 
-    /* Ajuste dos títulos para não ficarem gigantes no celular */
-    h1.titulo-sobre {
-        font-size: 40px !important;
+    /* 4. SETA (Canto inferior direito) */
+    .seta-container {
+        position: absolute !important;
+        right: 15px !important;
+        bottom: 25px !important;
+        left: auto !important;
+        transform: none !important;
+    }
+
+    .seta-pula {
+        width: 50px !important;
+    }
+
+    /* 5. FOOTER (Itens um embaixo do outro) */
+    .footer {
+        padding: 30px 15px !important;
+        width: 100%;
+    }
+
+    .footer-info {
+        flex-direction: column !important;
         text-align: center;
+        gap: 15px;
+    }
+
+    .footer-divider {
+        display: none !important;
     }
 }
 
