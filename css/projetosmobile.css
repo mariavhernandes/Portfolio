@@ -1,0 +1,156 @@
+.pagina-projeto{
+    padding:60px 80px;
+}
+
+.projeto-container{
+    display:flex;
+    gap:60px;
+    align-items:flex-start;
+}
+
+h1{
+    font-family:'Raleway', sans-serif;
+    font-weight: 500 !important;
+    font-size: 30px !important;
+    margin-bottom: 20px;
+    color:#ffffff !important;
+}
+
+.botao {
+    width:160px;
+    height:45px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    border-radius:25px;
+    text-decoration:none;
+    color:white;
+    margin-right:20px;
+    transition:0.6s;
+    border:2px solid transparent;
+}
+
+.texto-projeto p{
+    font-weight: 100 !important;
+    font-size: 25px;
+    color:#ffffff;
+    line-height:1.6;
+}
+
+.texto-projeto li{
+    font-weight: 100 !important;
+    font-size: 25px;
+    color:#ffffff;
+    line-height:1.6;
+}
+
+.texto-projeto{
+    width:60%;
+}
+
+.imagens-projeto {
+    width: 40%;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto auto; 
+    gap: 20px;
+    align-items: center;
+}
+
+.imagens-projeto img:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.imagens-projeto img:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.imagens-projeto img:nth-child(3) {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+}
+
+.imagens-projeto img {
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+}
+
+.voltar{
+    font-size:35px;
+    text-decoration:none;
+    color:white;
+}
+
+/* github botão */
+.github{
+    background:
+    linear-gradient(90deg, #1D1D1D,#1D1D1D) padding-box,
+    linear-gradient(90deg, #A30AF5,#2528f1) border-box;
+}
+
+.github:hover{
+    background:linear-gradient(90deg, #A30AF5,#2528f1) border-box;
+}
+
+/* responsividade */
+@media (max-width: 1024px) {
+    .pagina-projeto {
+        padding: 40px 40px; 
+    }
+
+    .projeto-container {
+        flex-direction: column; 
+        gap: 40px;
+    }
+
+    .texto-projeto, 
+    .imagens-projeto {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .pagina-projeto {
+        padding: 30px 20px;
+    }
+
+    .voltar {
+        font-size: 28px;
+    }
+
+    h1 {
+        font-size: 24px !important;
+        text-align: center;
+    }
+
+    .texto-projeto p, 
+    .texto-projeto li {
+        font-size: 18px;
+        text-align: justify;
+    }
+
+    .imagens-projeto {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .imagens-projeto img:nth-child(1),
+    .imagens-projeto img:nth-child(2),
+    .imagens-projeto img:nth-child(3) {
+        grid-column: auto;
+        grid-row: auto;
+        width: 100%;
+    }
+
+    .botao {
+        width: 100%; 
+        margin-right: 0;
+        margin-top: 20px;
+    }
+}
+

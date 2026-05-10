@@ -1,0 +1,92 @@
+@font-face{
+    font-family: 'BlackMango';
+    src: url('/portfolio_maria/fonte/BlackMango-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.secao-projetos{
+    padding:40px 80px;
+}
+
+/* titulo */
+.titulo-projetos{
+    font-family:'BlackMango';
+    font-size:70px;
+    margin-bottom:50px;
+}
+
+/* subtitulo */
+.categoria{
+    font-size:32px;
+    font-weight:500;
+    margin-top:40px;
+    margin-bottom:30px;
+    color: rgb(255, 255, 255);
+}
+
+.grid-projetos{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:40px;
+    margin-bottom:50px;
+}
+
+/* card projeto */
+.projeto{
+    text-align:center;
+}
+
+.projeto img{
+    width:100%;
+    border-radius:14px;
+    transition:0.3s;
+}
+
+.projeto p{
+    margin-top:15px;
+    font-size:22px;
+    font-weight:300;
+    color: #ffff;
+}
+
+/* responsividade */
+@media (max-width: 1024px) {
+    .secao-projetos {
+        padding: 40px 40px; 
+    }
+
+    .grid-projetos {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 30px;
+    }
+
+    .titulo-projetos {
+        font-size: 55px;
+    }
+}
+
+@media (max-width: 600px) {
+    .secao-projetos {
+        padding: 30px 20px; 
+    }
+
+    .titulo-projetos {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .categoria {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .grid-projetos {
+        grid-template-columns: 1fr; 
+        gap: 40px;
+    }
+
+    .projeto p {
+        font-size: 18px;
+    }
+}

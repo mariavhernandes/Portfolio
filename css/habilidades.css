@@ -1,0 +1,100 @@
+@font-face {
+    font-family: 'BlackMango';
+    src: url('/portfolio_maria/fonte/BlackMango-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.secao-habilidades {
+    padding: 60px 80px;
+}
+
+.titulo-habilidades {
+    font-family: 'BlackMango';
+    font-size: 70px;
+    margin-bottom: 50px;
+    color: white;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 100%;
+}
+
+.card-habilidade {
+    background: #252525;
+    padding: 40px;
+    border-radius: 16px;
+    border: 2px solid transparent;
+    transition: 0.4s;
+}
+
+/* hover card habilidade */
+.card-habilidade:hover {
+    transform:scale(1.05);
+    background:rgba(174,69,235,0.25);
+    border:2px solid #AE45EB;
+    box-shadow:0 0 25px #AE45EB;
+}
+
+/* rotação dos ícones */
+.card-habilidade:hover .icone img{
+    transform:rotate(-10deg) scale(1.1);
+}
+
+.card-habilidade h3 {
+    font-family: 'BlackMango';
+    color: white;
+    font-size: 38px;
+    margin-bottom: 20px;
+    font-weight: 100;
+}
+
+.card-habilidade ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card-habilidade li {
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+}
+
+.icone img{
+    width:55px;
+    margin-bottom:20px;
+    transition:0.4s;
+}
+
+.seta-lista {
+    width: 30px;
+    height: 30px;
+}
+
+/* responsividade */
+@media (max-width: 1024px) {
+    .secao-habilidades { padding: 40px; }
+    .titulo-habilidades { font-size: 55px; }
+}
+
+@media (max-width: 768px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .secao-habilidades { 
+        padding: 30px 20px; 
+    }
+    
+    .card-habilidade h3 { 
+        font-size: 30px; 
+    }
+}

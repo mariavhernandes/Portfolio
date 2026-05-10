@@ -1,0 +1,412 @@
+@font-face {
+    font-family: 'BlackMango';
+    src: url('../fonte/BlackMango-Regular.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Signature';
+    src: url('../fonte/Signature-Regular.otf'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sobreMim{
+    padding: 40px 80px;
+}
+
+.titulo-sobre{
+    font-family:'BlackMango';
+    font-size:70px;
+}
+
+p {
+    color: #ffffff;
+}
+
+.subtitulo{
+    font-size:22px;
+    margin-bottom:20px;
+    color:#ffffff;
+    font-weight: 100;
+}
+
+.sobre-container{
+    display:flex;
+    gap:120px;
+    margin-bottom:20px;
+}
+
+.coluna-esquerda{
+    max-width:600px;
+}
+
+.coluna-direita{
+    max-width:500px;
+}
+
+.card-biografia p{
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.card-biografia {
+    background: #333333;
+    padding: 25px;
+    border-radius: 15px;
+    width: 750px;       
+    margin-left: 0;    
+    transition: 0.4s;
+    margin-bottom: 50px;
+}
+
+.card-biografia:hover{
+    transform:scale(1.05);
+    background:rgba(174,69,235,0.25);
+    border:2px solid #AE45EB;
+    box-shadow:0 0 25px #AE45EB;
+}
+
+.card-idiomas {
+    background: #333333;
+    padding: 20px;
+    border-radius: 12px;
+    width: fit-content;
+    border:2px solid transparent;
+    transition:0.4s;
+    cursor:pointer;
+    flex: 1;
+    max-width: 350px;
+    margin-top: 0 !important;
+    margin-right: 0 !important;
+    width: 100%;
+}
+
+.card-idiomas:hover{
+    transform:scale(1.05);
+    background:rgba(174,69,235,0.25);
+    border:2px solid #AE45EB;
+    box-shadow:0 0 25px #AE45EB;
+}
+
+.card-idiomas h2 {
+    font-family: 'BlackMango';
+    font-size: 35px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.card-idiomas p {
+    font-size: 25px;
+}
+
+.card-idiomas span {
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.cert-toeic { 
+    font-size: 14px; 
+    color: #ffffff; 
+    padding-left: 10px; 
+    display: block;
+    margin-bottom: 40px;
+}
+
+.cursos-idiomas{
+    display: flex;
+    align-items: flex-start;
+    gap: 80px;
+    margin-top: 40px;
+}
+
+.bloco-cursos{
+    flex: 2;
+    max-width: 800px;
+}
+
+h2{
+    font-family:'BlackMango';
+    font-size:40px;
+    margin-bottom:20px;
+    margin-top:40px;
+    color:#ffffff !important;
+}
+
+.lista{
+    list-style:none;
+    padding:0;
+    color:#ffffff;
+}
+
+.lista li{
+    margin-bottom:20px;
+    font-size:20px;
+    line-height:1.6;
+}
+
+.obs{
+    font-size:16px;
+    margin-top:10px;
+    color:#e2e2e2;
+    font-style:italic;
+}
+
+.sobreMim { 
+    position: relative; 
+}
+
+.vector { 
+    position: absolute; 
+    z-index: 10; 
+    pointer-events: none; 
+}
+
+.v-coracao{
+    position: absolute;
+    top: -10px;
+    right: -20px;
+    width: 35px;
+}
+
+.estrela-esquerda {
+    position: absolute;
+    left: -30px; 
+    top: 0%;
+    transform: translateY(-50%);
+    width: 35px;
+    z-index: 10;
+}
+
+.estrela-direita {
+    position: absolute;
+    right: -30px; 
+    top: 100%;
+    transform: translateY(-50%);
+    width: 35px;
+    z-index: 10;
+}
+
+.posicao-estrela-idioma {
+    position: relative; 
+    display: flex;  
+    flex: 1;
+    max-width: 350px; 
+    margin-top: 40px;  
+    margin-right: 80px;
+}
+
+.v-estrela { 
+    bottom: 5%; 
+    right: 2%; 
+    width: 30px; 
+}
+
+/* botões laterais */
+.container-topo-novo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
+    width: 100%;
+    position: relative;
+    margin-top: 20px;
+}
+
+.botoes{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 15px;
+    margin-left: 80px;  
+    margin-top: 50px;
+}
+
+.botao{
+    width: 160px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+    transition: 0.6s;
+    border: 2px solid transparent;
+}
+
+/* linkedin botão */
+.linkedin{
+    background:
+    linear-gradient(90deg, #1D1D1D,#1D1D1D) padding-box,
+    linear-gradient(90deg, #F5006E,#AE45EB) border-box;
+}
+
+.linkedin:hover{
+    background:linear-gradient(90deg, #F5006E,#AE45EB) border-box;
+}
+
+/* github botão */
+.github{
+    background:
+    linear-gradient(90deg, #1D1D1D,#1D1D1D) padding-box,
+    linear-gradient(90deg, #A30AF5,#2528f1) border-box;
+}
+
+.github:hover{
+    background:linear-gradient(90deg, #A30AF5,#2528f1) border-box;
+}
+
+.trajetoria-container{
+    position: absolute;
+    left: 57%; 
+    top: -25%;
+    z-index: 10;
+}
+
+.coracao-trajetoria{
+    position: absolute;
+    bottom: -20px;
+    left: 40px;   
+    width: 35px;
+    height: auto !important;
+}
+
+.txt-trajetoria {
+    transform: rotate(-8deg);
+    text-align: center;
+    width: 350px; 
+}
+
+.txt-trajetoria span {
+    font-family: 'Signature';
+    font-size: 50px;
+    line-height: 0.9;
+    display: block;     
+    white-space: nowrap;
+}
+
+/* primeira linha (veja mais sobre minha) */
+.txt-trajetoria span:nth-child(1) {
+    margin-right: 60px; 
+}
+
+/* segunda linha (trajetoria) */
+.txt-trajetoria span:nth-child(2) {
+    margin-left: 0px; 
+}
+
+.info{
+    margin-top:40px;
+    display:flex;
+    gap:25px;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.curriculo{
+    padding:10px 20px;
+    border:2px solid;
+    border-radius:25px;
+    text-decoration:none;
+    color:white;
+}
+
+/* responsividade */
+@media (max-width: 1024px) {
+    .container-topo-novo {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .card-biografia {
+        width: 100%;
+        max-width: 600px;
+        margin-bottom: 20px;
+    }
+
+    .trajetoria-container {
+        position: relative;
+        left: 0;
+        top: 0;
+        margin: 20px 0;
+    }
+
+    .botoes {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .cursos-idiomas {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .posicao-estrela-idioma {
+        margin-right: 0;
+        width: 100%;
+        max-width: 400px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .txt-trajetoria span {
+        font-size: 35px;
+    }
+
+    .txt-trajetoria {
+        width: 100%;
+        transform: rotate(-4deg);
+    }
+
+    .txt-trajetoria span:nth-child(1) {
+        margin-right: 20px; 
+    }
+    
+    .txt-trajetoria span:nth-child(2) {
+        margin-left: 10px;
+    }
+
+    .coracao-trajetoria {
+        width: 25px;
+        left: 50%;
+        transform: translateX(-50%); 
+    }
+    
+    .botoes {
+        width: 100%;
+        align-items: center;
+    }
+    
+    .botao {
+        width: 90%;
+    }
+
+    .posicao-estrela-idioma {
+        max-width: 280px; 
+        margin: 40px auto; 
+    }
+
+    .estrela-esquerda {
+        width: 25px;
+        left: -15px; 
+        top: 10%;
+    }
+
+    .estrela-direita {
+        width: 25px; 
+        right: -15px; 
+        top: 90%;
+    }
+
+    .card-idiomas h2 {
+        font-size: 28px;
+    }
+}
