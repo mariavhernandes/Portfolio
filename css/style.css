@@ -313,112 +313,84 @@ color:#cfcfcf;
 }
 
 @media (max-width: 600px) {
- .home {
-        height: auto; /* Permite que a seção cresça para caber tudo */
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-bottom: 50px;
-        overflow: visible;
-    }
-
-    .imagem {
-        height: auto;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-    }
-
-    .foto-principal {
-        max-height: 60vh; /* Garante que a foto não suma da tela */
-        width: auto;
-    }
-
-    /* Transforma o container das estrelas/corações em uma linha embaixo da foto */
-    .decoracoes-mobile-wrapper {
-        display: flex;
-        flex-direction: row; /* Um do lado do outro */
-        justify-content: center;
-        align-items: center;
-        gap: 15px; /* Espaçamento entre eles */
-        margin-top: 20px;
-        width: 100%;
-    }
-
-    /* Reseta as posições absolutas APENAS no mobile */
-    .item-coracao, 
-    .item-coracao2, 
-    .item-estrela, 
-    .decoracao-lat-esq, 
-    .decoracao-lat-dir {
-        position: static !important; /* Remove o espalhamento */
-        width: 35px !important;      /* Tamanho menor para caberem todos */
-        height: auto !important;
-        transform: none !important;  /* Remove as rotações para ficarem alinhados */
-    }
-
-    /* Esconde a seta ou ajusta a posição se ela atrapalhar no mobile */
+    /* 1. Seta para o lado direito */
     .seta-container {
-        position: relative;
-        right: auto;
-        bottom: auto;
-        margin-top: 30px;
+        position: absolute !important;
+        right: 20px !important; /* Move para a direita */
+        left: auto !important;
+        bottom: 40px !important;
+        transform: none !important;
+        display: block !important;
     }
 
-    .sobre-container {
-        display: flex;
-        flex-direction: column !important; /* Força o empilhamento vertical */
-        gap: 40px; /* Espaço entre os blocos */
-        padding: 0 20px;
+    .seta-pula {
+        width: 55px !important;
     }
 
-    /* Faz as colunas ocuparem a largura total da tela */
-    .coluna-esquerda, 
-    .coluna-direita {
+    /* 2. Navbar e Footer (Responsividade) */
+    .header-fixo .navbar {
+        padding: 10px 0 !important;
+    }
+
+    /* Ajusta o padding do footer que estava em 80px */
+    .footer {
+        padding: 30px 15px !important; 
+        text-align: center;
         width: 100% !important;
     }
 
-    /* Faz Cursos e Idiomas também empilharem */
+    .footer-info {
+        flex-direction: column !important; /* Empilha os itens (local, email, botão) */
+        gap: 15px !important;
+        align-items: center !important;
+    }
+
+    /* Esconde as barras separadoras "|" no mobile para não poluir */
+    .footer-divider, .navbar-nav .separator {
+        display: none !important;
+    }
+
+    /* 3. Conteúdo menos achatado (Width maior) */
+    .container-topo-novo, 
+    .sobre-container, 
     .cursos-idiomas {
-        display: flex;
-        flex-direction: column !important;
-        gap: 40px;
-        padding: 0 20px;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 15px !important; /* Margem mínima nas bordas da tela */
+        margin: 0 auto !important;
     }
 
-    /* Ajusta o card de idiomas e as estrelas laterais para não quebrarem o layout */
+    /* Garante que os cards ocupem quase toda a largura da tela */
+    .card-biografia, 
+    .coluna-esquerda, 
+    .coluna-direita, 
+    .bloco-cursos, 
+    .card-idiomas {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 20px !important;
+        padding: 25px 20px !important; /* Espaço interno para o texto não sufocar */
+    }
+
+    /* Ajuste específico para o bloco de idiomas e estrelas */
     .posicao-estrela-idioma {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 10px !important;
     }
 
-    /* Garante que as estrelas decorativas não fiquem flutuando fora do lugar */
     .vector.estrela-esquerda, 
     .vector.estrela-direita {
         position: static !important;
-        transform: none !important;
-        margin: 10px auto;
+        margin: 10px auto !important;
+        width: 40px !important;
+        height: auto !important;
     }
 
-    /* Centraliza os títulos para uma leitura mais harmônica no celular */
-    .titulo-sobre, 
-    .subtitulo,
-    .coluna-esquerda h2, 
-    .coluna-direita h2, 
-    .bloco-cursos h2, 
-    .card-idiomas h2 {
-        text-align: center !important;
-    }
-
-    /* Ajuste fino na margem das listas para facilitar o toque */
-    .lista li {
-        margin-bottom: 20px;
-        padding-right: 10px;
+    /* Ajuste dos títulos para não ficarem gigantes no celular */
+    h1.titulo-sobre {
+        font-size: 40px !important;
+        text-align: center;
     }
 }
 
