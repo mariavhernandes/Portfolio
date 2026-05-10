@@ -340,20 +340,23 @@ color:#cfcfcf;
 
     /* 2. HOME E FOTO (Respiro para a imagem principal) */
     .home {
-        height: auto;
         min-height: 100vh;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
-        padding-bottom: 50px;
-        overflow: visible;
+        padding-top: 80px;
+        padding-bottom: 0;
     }
 
     .imagem {
-        height: auto;
-        width: 100%;
-        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 0;
+        padding-top: 20px;
     }
 
     .foto-principal {
@@ -361,10 +364,10 @@ color:#cfcfcf;
         width: 100%;
         max-width: 100%;
         height: auto;
-        max-height: none;
-        object-fit: contain;
         display: block;
         margin: 0 auto;
+        position: relative;
+        top: -40px; /* sobe a imagem */
     }
 
     /* Decorações alinhadas horizontalmente abaixo da foto */
@@ -435,15 +438,17 @@ color:#cfcfcf;
 
     /* 4. SETA (Canto inferior direito) */
     .seta-container {
-        position: absolute !important;
-        right: 15px !important;
-        bottom: 25px !important;
+        position: fixed !important;
+        bottom: 20px !important;
+        right: 20px !important;
         left: auto !important;
-        transform: none !important;
+        z-index: 9999 !important;
     }
 
     .seta-pula {
         width: 50px !important;
+        height: auto;
+        display: block;
     }
 
     /* 5. FOOTER (Itens um embaixo do outro) */
