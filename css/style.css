@@ -338,24 +338,25 @@ color:#cfcfcf;
         display: none !important;
     }
 
-    /* 2. HOME E FOTO (Respiro para a imagem principal) */
     .home {
         min-height: 100vh;
         height: 100vh;
         position: relative;
         overflow: hidden;
         display: flex;
-        flex-direction: column;
-        justify-content: center; /* Centraliza verticalmente o conteúdo */
-        align-items: center;     /* Centraliza horizontalmente o conteúdo */
-        padding-top: 60px;
+        justify-content: center;   /* ← era flex-start */
+        align-items: center;
+        padding-top: 80px;
+        padding-bottom: 0;
     }
 
     .imagem {
-        width: 100%;
         display: flex;
-        justify-content: center; /* Centraliza a foto horizontalmente */
-        align-items: flex-start;
+        justify-content: center;
+        align-items: center;        /* ← era flex-start */
+        width: 100%;
+        margin-top: 0;
+        padding-top: 0;
     }
 
     .foto-principal {
@@ -364,9 +365,9 @@ color:#cfcfcf;
         max-width: 100%;
         height: auto;
         display: block;
-        margin: 0 auto;         /* Garante centralização */
+        margin: 0 auto;
         position: relative;
-        top: -80px;            /* Aumentei aqui para subir mais a foto */
+        top: -60px;                 /* ← sobe mais a imagem */
     }
 
     /* Decorações alinhadas horizontalmente abaixo da foto */
@@ -436,14 +437,13 @@ color:#cfcfcf;
     }
 
     .seta-container {
-        /* Mudamos de fixed para absolute */
-        position: absolute !important; 
-        bottom: 30px !important;    /* Distância do fundo da seção Home */
-        right: 0 !important;
-        left: 0 !important;         /* Left e Right 0 + margin auto centraliza */
-        margin: 0 auto !important;
-        width: fit-content;
-        z-index: 999;
+        position: fixed !important;
+        bottom: 20px !important;
+        right: 50% !important;      /* ← centraliza horizontalmente */
+        transform: translateX(50%) !important;
+        left: auto !important;
+        z-index: 9999 !important;
+        transition: opacity 0.4s ease;
     }
 
     .seta-pula {
