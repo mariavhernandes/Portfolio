@@ -344,8 +344,8 @@ color:#cfcfcf;
         position: relative;
         overflow: hidden;
         display: flex;
-        justify-content: center;   /* ← era flex-start */
-        align-items: center;
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: flex-start; /* Alinha o conteúdo da home mais para cima */
         padding-top: 80px;
         padding-bottom: 0;
     }
@@ -353,10 +353,9 @@ color:#cfcfcf;
     .imagem {
         display: flex;
         justify-content: center;
-        align-items: center;        /* ← era flex-start */
-        width: 100%;
+        align-items: flex-start; /* Alinha a imagem mais para cima */
         margin-top: 0;
-        padding-top: 0;
+        padding-top: 0; /* Removido padding-top para evitar deslocamento */
     }
 
     .foto-principal {
@@ -367,7 +366,8 @@ color:#cfcfcf;
         display: block;
         margin: 0 auto;
         position: relative;
-        top: -60px;                 /* ← sobe mais a imagem */
+        top: 0;
+        transform: translateY(-10%); /* Ajusta a posição vertical para cima */
     }
 
     /* Decorações alinhadas horizontalmente abaixo da foto */
@@ -436,14 +436,16 @@ color:#cfcfcf;
         width: 40px !important;
     }
 
+    /* 4. SETA (Canto inferior direito) */
     .seta-container {
-        position: fixed !important;
-        bottom: 20px !important;
-        right: 50% !important;      /* ← centraliza horizontalmente */
-        transform: translateX(50%) !important;
-        left: auto !important;
-        z-index: 9999 !important;
-        transition: opacity 0.4s ease;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        left: auto;
+        z-index: 9999;
+        width: 50px; /* Garante que a seta tenha uma largura definida */
+        height: auto; /* Mantém a proporção da seta */
+        display: block; /* Garante que a seta ocupe seu próprio espaço */
     }
 
     .seta-pula {
